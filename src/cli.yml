@@ -1,0 +1,9 @@
+name: codestation-transport
+version: 0.0.1
+author: Tom McKernan <tmeaglei@gmail.com>
+about: exports a script that should mirror your current setup
+args:
+  - PACKAGES:
+      help: The packages to export
+      required: true
+      multiple: true
