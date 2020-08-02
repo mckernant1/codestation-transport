@@ -15,13 +15,16 @@ pub fn export_npm() -> String {
 
     let get_npm_dep_regex = Regex::new(r"([@]?[\w+]+[/]?[\w+]*)@")
         .unwrap();
-    let npm_string: String = format!("npm i -g {}",
-                                     String::from_utf8_lossy(&npm_global_list.stdout)
-                                         .split("\n")
-                                         .filter_map(|it| {
-                                             get_npm_dep_regex.captures(it)?.get(1)
-                                         }).map(|it| it.as_str())
-                                         .collect::<Vec<&str>>()
-                                         .join(" "));
-    return npm_string;
+    let npm_string = String::from_utf8_lossy(&npm_global_list.stdout)
+        .split("\n")
+        .filter_map(|it| {
+            get_npm_dep_regex.captures(it)?.get(1)
+        }).map(|it| it.as_str())
+        .collect::<Vec<&str>>()
+        .join(" ");
+
+    return format!(r##"
+# Install Global NPM dependencies
+npm i -g {}
+    "##, npm_string);
 }

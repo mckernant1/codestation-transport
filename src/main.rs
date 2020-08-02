@@ -1,5 +1,7 @@
 mod brew;
 mod npm;
+mod zsh;
+mod p10k;
 
 #[macro_use]
 extern crate clap;
@@ -21,6 +23,8 @@ fn main() {
         let package_string = match package.as_str() {
             "brew" => brew::export_brew(),
             "npm" => npm::export_npm(),
+            "zsh" => zsh::export_zsh(),
+            "p10k" => p10k::export_p10k(),
             _ => {
                 panic!("{} does not match any available options", package)
             }

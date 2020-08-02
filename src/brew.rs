@@ -41,6 +41,13 @@ pub fn export_brew() -> String {
 
     format!(r##"
 # ====== BREW ======
+# Install xcode
+xcode-select --install
+
+# Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+
 # All your taps
 {}
 
