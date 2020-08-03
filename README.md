@@ -1,6 +1,12 @@
 # Codestation-Transport
 
-Creates an sh file that will export your current setup for various utilities (brew, npm, zsh, p10k)
+Creates an sh file that will export your current setup for various utilities.
+
+## Included Utilities
+- brew
+- npm
+- zsh (.zshrc)
+- p10k (.p10k.zsh)
 
 ## Install
 ```bash
