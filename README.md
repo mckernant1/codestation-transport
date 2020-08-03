@@ -5,8 +5,8 @@ Creates an sh file that will export your current setup for various utilities.
 ## Included Utilities
 - brew
 - npm
-- zsh (.zshrc)
-- p10k (.p10k.zsh)
+- zsh (.zshrc + oh-my-zsh installation)
+- p10k (.p10k.zsh + p10k installation via oh-my-zsh)
 
 ## Install
 ```bash
