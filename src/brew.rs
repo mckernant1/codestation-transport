@@ -16,7 +16,7 @@ pub fn export_brew() -> String {
             .collect::<Vec<String>>()
             .join("\n");
 
-    let brew_list_output = match Command::new("brew").arg("list").output() {
+    let brew_list_output = match Command::new("brew").arg("leaves").output() {
         Ok(x) => x,
         Err(e) => {
             panic!("{:?}", e)
