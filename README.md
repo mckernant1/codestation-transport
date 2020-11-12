@@ -10,7 +10,7 @@ Creates an sh file that will export your current setup for various utilities.
 
 ## Install
 ```bash
-brew tap mckernant1/tools
+brew tap mckernant1/tap
 brew install codestation-transport
 ```
 
