@@ -19,7 +19,7 @@ _codestation-transport() {
 '--help[Prints help information]' \
 '-V[Prints version information]' \
 '--version[Prints version information]' \
-':PACKAGES -- The packages to export:_files' \
+':PACKAGES -- The packages to export. Options are brew, npm, p10k, and zsh:_files' \
 && ret=0
     
 }

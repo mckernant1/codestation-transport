@@ -4,6 +4,6 @@ author: Tom McKernan <tmeaglei@gmail.com>
 about: exports a script that should mirror your current setup
 args:
   - PACKAGES:
-      help: The packages to export
+      help: The packages to export. Options are brew, npm, p10k, and zsh
       required: true
       multiple: true

@@ -16,7 +16,9 @@ pub fn export_brew() -> String {
             .collect::<Vec<String>>()
             .join("\n");
 
-    let brew_list_output = match Command::new("brew").arg("leaves").output() {
+    let brew_list_output = match Command::new("brew")
+        .arg("leaves")
+        .output() {
         Ok(x) => x,
         Err(e) => {
             panic!("{:?}", e)
@@ -27,8 +29,8 @@ pub fn export_brew() -> String {
 
 
     let brew_cask_list_output = match Command::new("brew")
-        .arg("cask")
         .arg("list")
+        .arg("--cask")
         .output() {
         Ok(x) => x,
         Err(e) => {
@@ -36,7 +38,7 @@ pub fn export_brew() -> String {
         }
     };
 
-    let brew_cask_string = format!("brew cask install {}", String::from_utf8_lossy(&brew_cask_list_output.stdout).replace("\n", " "));
+    let brew_cask_string = format!("brew install --cask {}", String::from_utf8_lossy(&brew_cask_list_output.stdout).replace("\n", " "));
 
 
     format!(r##"

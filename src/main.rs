@@ -26,7 +26,7 @@ fn main() {
             "zsh" => zsh::export_zsh(),
             "p10k" => p10k::export_p10k(),
             _ => {
-                panic!("{} does not match any available options", package)
+                panic!("{} does not match any of [brew, npm, zsh, p10k]", package)
             }
         };
         string_vec.push(package_string);
