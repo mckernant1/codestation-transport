@@ -1,5 +1,5 @@
 name: codestation-transport
-version: 0.0.2
+version: 0.0.3
 author: Tom McKernan <tmeaglei@gmail.com>
 about: exports a script that should mirror your current setup
 args:
